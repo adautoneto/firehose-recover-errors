@@ -1,0 +1,12 @@
+redshift:
+  host: <host> # e.g. my-redshift-cluster.nf3oihf3n39f.us-east-1.redshift.amazonaws.com
+  port: 5439
+  user: <user>
+  password: <password>
+  database: <database>
+
+copy:
+  table: <redshift_table>
+  options: <options> # e.g. "GZIP timeformat 'auto' region 'us-east-1'"
+  bucket: <s3_bucket>
+  credentials: <aws_credentials> # usually an IAM Role, e.g: 'aws_iam_role=arn:aws:iam::123456789012:role/myRedshiftRole'
